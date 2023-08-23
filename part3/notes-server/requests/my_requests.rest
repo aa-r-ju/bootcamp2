@@ -1,0 +1,42 @@
+DELETE http://localhost:3001/api/notes/2
+###
+GET http://localhost:3001/api/users/
+###
+POST http://localhost:3001/api/notes/
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlamoiLCJpZCI6IjY0ZGM5ZTFjZWY4Y2IwNzdiOWU3Y2E4NSIsImlhdCI6MTY5MjI0ODkzMSwiZXhwIjoxNjkyMjQ4OTYxfQ.W6DY2AyE4x-EcDqIhGaPN_wcIUmH8P8MCsLZEquJwVA
+
+{
+    
+    "content": "note creation using token",
+    "important": "true",
+    "userId":"64dc6a60b0e3ad86fe6fcf85"
+    
+
+}
+###
+
+POST http://localhost:3001/api/users/
+content-type: application/json
+{
+       "username": "Tejj",
+       "name": "Fellowship",
+       "password":"tejfellow"
+}
+###
+POST http://localhost:3001/api/login/
+content-type: application/json
+
+{
+       "username": "Tejj",
+       "password":"tejfellow"
+}
+###
+PUT http://localhost:3001/api/notes/64d06f07dfe468336ce336ac
+content-type: application/json
+
+{
+    
+    "content": "abtfugujg",
+    "important": true
+}
